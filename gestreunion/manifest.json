@@ -1,0 +1,22 @@
+{
+  "name": "GestRéunion",
+  "short_name": "GestRéunion",
+  "description": "Gestion du cycle complet des réunions d'équipe",
+  "start_url": "/gestreunion/",
+  "scope": "/gestreunion/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/gestreunion/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/gestreunion/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

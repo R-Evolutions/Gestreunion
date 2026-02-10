@@ -1,0 +1,20 @@
+# ============================================
+# GestReunion - SPA fallback
+# ============================================
+
+# SPA fallback - redirige vers index.html dans ce sous-dossier
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /gestreunion/
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /gestreunion/index.html [L]
+</IfModule>
+
+# Service Worker - ne pas cacher
+<IfModule mod_headers.c>
+  <FilesMatch "sw\.js$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+</IfModule>
