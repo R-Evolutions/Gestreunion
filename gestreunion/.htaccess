@@ -12,6 +12,11 @@
   RewriteRule . /gestreunion/index.html [L]
 </IfModule>
 
+# Autoriser micro pour enregistrement audio
+<IfModule mod_headers.c>
+  Header always set Permissions-Policy "camera=(), microphone=(self), geolocation=()"
+</IfModule>
+
 # Service Worker - ne pas cacher
 <IfModule mod_headers.c>
   <FilesMatch "sw\.js$">
